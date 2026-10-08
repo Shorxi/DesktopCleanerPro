@@ -4,7 +4,7 @@
 
 ---
 
-## 🇩🇪 DEUTSCH
+## DEUTSCH
 
 ### Was ist das?
 DesktopCleaner Pro räumt deinen überfüllten Desktop automatisch auf. Es scannt alle Dateien und sortiert sie in Kategorien wie Bilder, PDFs, Videos, Code, Programme usw.
@@ -67,7 +67,7 @@ Mit ❤️ entwickelt: Muse Spark, der Paket-Assistent 🧰 – Copilot Auron, d
 
 ---
 
-## 🇬🇧 ENGLISH
+## ENGLISH
 
 ### What is it?
 DesktopCleaner Pro cleans your cluttered desktop automatically. It scans all files and sorts them into categories like Images, PDFs, Videos, Code, Programs etc.
