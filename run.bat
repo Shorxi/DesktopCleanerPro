@@ -3,7 +3,7 @@ setlocal
 cd /d "%~dp0"
 
 echo ==========================================
-echo DesktopCleaner Pro - Starter v1.2
+echo DesktopCleaner Pro - Starter
 echo ==========================================
 echo Directory: %CD%
 echo.
