@@ -69,6 +69,8 @@ Mit ❤️ entwickelt: Muse Spark, der Paket-Assistent 🧰 – Copilot Auron, d
 
 ---
 
+<img width="1917" height="1111" alt="test2" src="https://github.com/user-attachments/assets/8f1e34d5-ae57-4388-8d27-b77cf1a83f24" />
+
 ## ENGLISH
 
 ### What is it?
