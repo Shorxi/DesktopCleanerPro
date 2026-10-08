@@ -14,7 +14,7 @@ DesktopCleaner Pro räumt deinen überfüllten Desktop automatisch auf. Es scann
 - **Aufräumen:** Zeigt alle Dateien mit Zielordner, sortiert per Knopfdruck
 - **Suche:** Live-Suche mit Explorer Integration (Rechtsklick Öffnen / Im Explorer zeigen)
 - **Statistik:** 
-  - **NEU v1.2 - Pie Chart Fix:** Keine überlappenden Texte mehr im Kreisdiagramm! Stattdessen saubere Legende **unten** mit farbigen Quadraten. Jede Farbe = ein Dateityp, 100% überschneidungsfrei.
+  - **NEU - Pie Chart Fix:** Keine überlappenden Texte mehr im Kreisdiagramm! Stattdessen saubere Legende **unten** mit farbigen Quadraten. Jede Farbe = ein Dateityp, 100% überschneidungsfrei.
   - Balkendiagramm Speicher nach Kategorie (MB)
 - **Einstellungen:** Sprache DE/EN umschaltbar, Auto-Clean Intervall (5m/15m/30m/1h/2h)
 
@@ -77,7 +77,7 @@ DesktopCleaner Pro cleans your cluttered desktop automatically. It scans all fil
 - **Clean:** Shows all files with target folder, sorts with one click
 - **Search:** Live search with Explorer integration (Open / Show in Explorer)
 - **Statistics:**
-  - **NEW v1.2 - Pie Chart Fix:** No more overlapping texts in pie chart! Clean legend **below** with colored squares. Each color = one file type, 100% overlap-free.
+  - **NEW - Pie Chart Fix:** No more overlapping texts in pie chart! Clean legend **below** with colored squares. Each color = one file type, 100% overlap-free.
   - Bar chart storage per category (MB)
 - **Settings:** Language DE/EN switchable, Auto-Clean interval (5m/15m/30m/1h/2h)
 
