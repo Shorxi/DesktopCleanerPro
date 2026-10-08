@@ -37,7 +37,8 @@ Benötigt: Python 3.9+, tkinter, psutil, matplotlib, Pillow
   ```
 - Auch mit Leerzeichen im Pfad wie `Desktop aufräumen` funktioniert
 - EXE liegt danach in `dist\DesktopCleanerPro.exe`
-
+- "Hinweis: Fehlermeldungen in der Konsole können ignoriert werden; lassen Sie den Prozess beim Erstellen der .exe-Datei einfach bis zum Ende durchlaufen."
+  
 **Alternativ:**
 ```bat
 python main.py
@@ -102,6 +103,7 @@ Requires: Python 3.9+, tkinter, psutil, matplotlib, Pillow
   ```
 - Works even with spaces in path like `Desktop aufräumen`
 - EXE will be in `dist\DesktopCleanerPro.exe`
+- "Note: Error messages in the console can be ignored; simply let the process run to completion when generating the .exe."
 
 **Alternative:**
 ```bat
