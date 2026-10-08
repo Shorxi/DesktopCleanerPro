@@ -1,87 +1,137 @@
-# ✨ DesktopCleaner Pro
+# DesktopCleaner Pro 
 
-Dein Desktop ist dein digitales Zuhause. Diese App macht ihn endlich ästhetisch.
-
-### Was macht die App?
-
-**Mit einem Klick auf "Aufräumen"** werden alle losen Dateien auf deinem Desktop automatisch sortiert:
-
-- 📸 **Bilder** (.jpg, .png, .gif, .svg...) → Ordner `Bilder`
-- 📄 **PDFs** (.pdf) → Ordner `PDFs`
-- 📝 **Dokumente** (.docx, .txt, .md...) → Ordner `Dokumente`
-- 📊 **Tabellen** (.xlsx, .csv...) → Ordner `Tabellen`
-- 🎬 **Videos** (.mp4, .mov, .mkv...) → Ordner `Videos`
-- 🎵 **Musik** (.mp3, .wav...) → Ordner `Musik`
-- 📦 **Archive** (.zip, .rar, .7z) → Ordner `Archive`
-- 💻 **Code** (.py, .js, .html...) → Ordner `Code`
-- 🚀 **Programme** (.exe, .lnk...) → Ordner `Programme`
-- 📁 **Sonstiges** → Alles andere
-
-> Wenn die Ordner schon existieren, werden sie genutzt. Wenn nicht, werden sie automatisch erstellt. Namenskonflikte werden mit `_1`, `_2` gelöst - nichts geht verloren!
-
-### Features
-
-- 🎨 **Stylische Oberfläche**: Dark Mode, abgerundete Karten, Hover-Animationen, Gradient Buttons
-- ⚡ **Live Speicher-Anzeige**: RAM, CPU, Disk Auslastung in Echtzeit (mit psutil)
-- 🔍 **Suchfunktion**: Finde Dateien sofort, Doppelklick zum Öffnen, Button "Im Explorer zeigen"
-- 📊 **Modernes Statistik-Diagramm**: Donut-Chart + Bar-Chart welche Dateitypen am meisten Platz fressen (Matplotlib)
-- 🔁 **Auto-Clean Schalter**: Schalter an → Desktop räumt sich alle 5 Min / 15 Min / 30 Min / 1h / 2h von alleine auf
-- 🧠 **Intelligenter Desktop-Pfad Finder**: Funktioniert auch mit OneDrive Desktop
-
-### Installation (Windows)
-
-**Variante 1 - Doppelklick (einfach):**
-1. ZIP entpacken
-2. Doppelklick auf `run.bat`
-3. Fertig!
-
-**Variante 2 - Manuell:**
-```bash
-pip install -r requirements.txt
-python main.py
-```
-
-**Voraussetzungen:**
-- Windows 10/11
-- Python 3.9+ (von python.org, Haken bei "Add to PATH" setzen!)
-- Module: psutil, matplotlib, Pillow (werden von run.bat automatisch installiert)
-
-### So sieht's aus
-
-- **Dashboard**: Überblick, Schnell-Aufräumen, letzte Dateien
-- **Aufräumen**: Vorschau welche Ordner erstellt werden, Liste aller Dateien, Fortschrittsbalken mit Animation
-- **Suche**: Live-Suche, öffnen, im Explorer zeigen
-- **Statistik**: Welche Dateitypen dominieren? Wo ist dein Speicher hin?
-- **Einstellungen**: Auto-Clean Toggle + Intervall, Infos
-
-### Auto-Clean Loop erklärt
-
-In Einstellungen kannst du den Schalter aktivieren:
-- An → App plant automatisch alle X Minuten ein Aufräumen
-- Intervall wählbar: 5 Min bis 2 Stunden
-- Läuft im Hintergrund via `root.after()` - kein extra Task, super leichtgewichtig
-
-### Sicherheit
-
-- Es werden **nur Dateien** verschoben, keine Ordner
-- `desktop.ini` und temporäre Dateien werden ignoriert
-- Keine Datei wird gelöscht
-- Bei gleichem Namen wird automatisch umbenannt
-
-### Für Entwickler
-
-Code Struktur:
-- `main.py` → UI mit Animationen, 5 Seiten, Toggle, Charts
-- `cleaner_engine.py` → Scan + Sortier-Logik, Desktop-Pfad Erkennung
-- `requirements.txt` → Abhängigkeiten
-
-Willst du eine .exe bauen?
-```bash
-pip install pyinstaller
-pyinstaller --onefile --windowed --name DesktopCleanerPro main.py
-```
+### ✨ Your smart desktop organizer - Dein smarter Desktop Aufräumer
 
 ---
 
-Gebaut für den Test - und hat bestanden? 😉
-Viel Spaß mit deinem cleanen Desktop!
+## 🇩🇪 DEUTSCH
+
+### Was ist das?
+DesktopCleaner Pro räumt deinen überfüllten Desktop automatisch auf. Es scannt alle Dateien und sortiert sie in Kategorien wie Bilder, PDFs, Videos, Code, Programme usw.
+
+### Features
+- **Dashboard:** Überblick über Dateien, Speicher, Kategorien, RAM/CPU/Disk Anzeige
+- **Aufräumen:** Zeigt alle Dateien mit Zielordner, sortiert per Knopfdruck
+- **Suche:** Live-Suche mit Explorer Integration (Rechtsklick Öffnen / Im Explorer zeigen)
+- **Statistik:** 
+  - **NEU v1.2 - Pie Chart Fix:** Keine überlappenden Texte mehr im Kreisdiagramm! Stattdessen saubere Legende **unten** mit farbigen Quadraten. Jede Farbe = ein Dateityp, 100% überschneidungsfrei.
+  - Balkendiagramm Speicher nach Kategorie (MB)
+- **Einstellungen:** Sprache DE/EN umschaltbar, Auto-Clean Intervall (5m/15m/30m/1h/2h)
+
+### Installation
+```bat
+pip install -r requirements.txt
+```
+Benötigt: Python 3.9+, tkinter, psutil, matplotlib, Pillow
+
+### Starten
+**Empfohlen - run.bat:**
+- Doppelklick auf `run.bat` (NICHT als Admin!)
+- Auto-Erkennung deines Python (py Launcher, PATH, Standardpfade)
+- Menü:
+  ```
+  [1] Build EXE to dist\DesktopCleanerPro.exe
+  [2] Run directly with Python
+  ```
+- Auch mit Leerzeichen im Pfad wie `Desktop aufräumen` funktioniert
+- EXE liegt danach in `dist\DesktopCleanerPro.exe`
+
+**Alternativ:**
+```bat
+python main.py
+py -3 main.py
+```
+
+### Projektstruktur
+```
+DesktopCleanerPro/
+├── main.py              # GUI (Tkinter + Matplotlib)
+├── cleaner_engine.py    # Scan & Sort Logik
+├── languages.py         # DE/EN Übersetzungen
+├── requirements.txt
+├── run.bat              # Starter mit Auto-Erkennung & Build-Menü
+├── assets/icon.png      # Optional Icon für EXE
+└── config.json          # Sprache wird hier gespeichert
+```
+
+### Sprachen
+Im Programm unter Einstellungen umschaltbar. Wird in `config.json` gespeichert. Alle Kategorien und UI Texte sind zweisprachig.
+
+### Hinweise
+- **Nicht als Admin starten!** PyInstaller blockt Admin ab v7.0
+- EXE Build braucht ca. 1-2 Minuten
+- `assets/icon.png` optional, wenn vorhanden wird es ins EXE eingebettet
+
+## Author Emanuel Schaaf
+Mit ❤️ entwickelt: Muse Spark, der Paket-Assistent 🧰 – Copilot Auron, der Windows wie seine Westentasche kennt 😎 – und Gemini Lyra, die kreative Inspiration 🎨
+
+---
+
+## 🇬🇧 ENGLISH
+
+### What is it?
+DesktopCleaner Pro cleans your cluttered desktop automatically. It scans all files and sorts them into categories like Images, PDFs, Videos, Code, Programs etc.
+
+### Features
+- **Dashboard:** Overview of files, storage, categories, RAM/CPU/Disk stats
+- **Clean:** Shows all files with target folder, sorts with one click
+- **Search:** Live search with Explorer integration (Open / Show in Explorer)
+- **Statistics:**
+  - **NEW v1.2 - Pie Chart Fix:** No more overlapping texts in pie chart! Clean legend **below** with colored squares. Each color = one file type, 100% overlap-free.
+  - Bar chart storage per category (MB)
+- **Settings:** Language DE/EN switchable, Auto-Clean interval (5m/15m/30m/1h/2h)
+
+### Installation
+```bat
+pip install -r requirements.txt
+```
+Requires: Python 3.9+, tkinter, psutil, matplotlib, Pillow
+
+### Starting
+**Recommended - run.bat:**
+- Double-click `run.bat` (NOT as admin!)
+- Auto-detection of your Python (py launcher, PATH, common install paths)
+- Menu:
+  ```
+  [1] Build EXE to dist\DesktopCleanerPro.exe
+  [2] Run directly with Python
+  ```
+- Works even with spaces in path like `Desktop aufräumen`
+- EXE will be in `dist\DesktopCleanerPro.exe`
+
+**Alternative:**
+```bat
+python main.py
+py -3 main.py
+```
+
+### Project Structure
+```
+DesktopCleanerPro/
+├── main.py              # GUI (Tkinter + Matplotlib)
+├── cleaner_engine.py    # Scan & Sort logic
+├── languages.py         # DE/EN translations
+├── requirements.txt
+├── run.bat              # Starter with auto-detection & build menu
+├── assets/icon.png      # Optional icon for EXE
+└── config.json          # Language is saved here
+```
+
+### Languages
+Switchable in app under Settings. Saved in `config.json`. All categories and UI texts are bilingual.
+
+### Notes
+- **Do not run as admin!** PyInstaller blocks admin from v7.0
+- EXE build takes ~1-2 minutes
+- `assets/icon.png` optional, if present it will be embedded in EXE
+
+---
+
+## Changelog 
+- **Fixed:** Pie chart overlapping texts -> moved to legend below with colored squares
+- **Added:** run.bat with Python auto-detection + build menu [1] Build EXE [2] Skip
+- **Added:** Bilingual README, proper path handling for spaces, no-admin warning
+- **Improved:** Chart titles use `tr()` for DE/EN
+
+## Author Emanuel Schaaf
+Developed with ❤️: Muse Spark, the package wizard 🧰 – Copilot Auron, who knows Windows like the back of his hand 😎 – and Gemini Lyra, the creative inspiration 🎨
