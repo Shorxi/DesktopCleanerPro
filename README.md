@@ -1,3 +1,5 @@
+<img width="1917" height="1110" alt="test" src="https://github.com/user-attachments/assets/8c3639b7-a78a-46be-8452-ceb918389039" />
+
 # DesktopCleaner Pro 
 
 ### ✨ Your smart desktop organizer - Dein smarter Desktop Aufräumer
